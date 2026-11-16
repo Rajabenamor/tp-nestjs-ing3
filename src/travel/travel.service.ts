@@ -17,7 +17,8 @@ export class TravelService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} travel`;
+    const trip =this.trips.find((t) => t.id===id);
+    return trip;
   }
 
   update(id: number, updateTravelDto: UpdateTravelDto) {
